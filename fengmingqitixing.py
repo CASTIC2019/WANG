@@ -8,6 +8,7 @@ import numpy as np
 import cv2
 import serial
 import serial.tools.list_ports
+import time
 
 ports = list(serial.tools.list_ports.comports())
 print (ports)
@@ -19,6 +20,7 @@ for p in ports:
     else :
         print ("No Arduino Device was found connected to the computer")
 
+time.sleep(3)
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 imgface = cv2.imread('face.jpg')
 cap = cv2.VideoCapture(0)
