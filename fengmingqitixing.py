@@ -14,7 +14,7 @@ print (ports)
 
 for p in ports:
     print (p[1])
-    if "SERIAL" in p[1] or "UART" in p[1]:
+    if "SERIAL" in p[1] or "UART" or "Serial" in p[1]:
         ser=serial.Serial(port=p[0])
     else :
         print ("No Arduino Device was found connected to the computer")
