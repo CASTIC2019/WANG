@@ -21,7 +21,7 @@ for p in ports:
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 imgface = cv2.imread('face.jpg')
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 while(True):
     cv2.imwrite('face.jpg',imgface[0:10,0:10])
     ret,img = cap.read()
